@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+body {
+  margin: 0px;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color:hsl(210, 46%, 95%);
+}
+.gridbox {
+  display: grid;
+  margin: 0;
+  grid-auto-rows: 0re;
+  grid-auto-columns: auto;
+  grid-template-areas:
+    "item1 item1 item2 item5"
+    "item3 item4 item4 item5";
+  gap: 20px;
+  width: 75%;
+}
+.item1,
+.item2,
+.item3,
+.item4,
+.item5 {
+  border-radius: 10px;
+  padding: 20px;
+
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.item1 {
+  background-color: hsl(263, 55%, 52%);
+  background-image: url(bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  color: hsl(0, 0%, 100%);
+  background-position: right;
+  /* background-size: auto; */
+  grid-area: item1;
+}
+p {
+  opacity: 0.8;
+}
+* {
+  box-sizing: border-box;
+}
+.item2 {
+  grid-area: item2;
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(0, 0%, 100%);
+}
+img {
+  float: left;
+  border-radius: 15px;
+  border: 1px solid hsl(0, 0%, 100%);
+}
+.item5 {
+  background-color: hsl(0, 0%, 100%);
+  grid-area: item5;
+  color: hsl(217, 19%, 35%);
+  box-shadow: 6px 1px 12px hsl(216 23% 75%);
+}
+.item3 {
+  grid-area: item3;
+  color: hsl(217, 19%, 35%);
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 6px 1px 12px hsl(216 23% 75%);
+}
+.item4 {
+  grid-area: item4;
+  background-color: hsl(219, 29%, 14%);
+  color: hsl(0, 0%, 100%);
+}
+@media screen and (max-width:1300px) {
+  .gridbox {
+    display: grid;
+    /* margin: 0; */
+    grid-template-areas:
+      "item1 item1 item1 item1"
+      "item2 item2 item2 item2"
+      "item3 item3 item3 item3"
+      "item4 item4 item4 item4"
+      "item5 item5 item5 item5";
+    gap: 20px;
+    width: 100%;
+    /* margin-top: 20px; */
+  }
+  body{
+    height: fit-content;
+    padding: 40px;
+  }
+  
+}
